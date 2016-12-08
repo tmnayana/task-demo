@@ -1,0 +1,56 @@
+<style>
+.gridOptionsStyle {
+	margin-top: 6%;
+    padding: 2% 0 0 18%;
+}
+.dropdown-menu {
+	margin-left: -10%;
+}
+.iconSizeInfo {
+	width: 30%;
+	height: 2em;
+}
+.iconSize {
+	width: 71%;
+	height: 2em;
+}
+</style>
+
+<div class="ui-grid-cell-contents gridOptionsStyle">
+ <img src="../public/assets/images/info-23-23.png" class="iconSizeInfo"
+  data-ng-click="grid.appScope.vm.viewCustomerInfo(row)">
+    <div class="btn-group" dropdown dropdown-append-to-body>
+	    <img class="dropdown-toggle iconSize" src="../public/assets/images/dropdown-23-23.png" dropdown-toggle>
+	    <ul class="dropdown-menu" role="menu">
+	      <li>
+		    <a href="" data-ng-click="grid.appScope.vm.viewCustomerInfo(row)">
+		    View Customer Info
+		    </a>
+	      </li>
+	      <li  data-ng-show ="row.entity.status == 'Deactivated'">	
+	      	<a href="" data-ng-click="grid.appScope.vm.openActivateCustomer(row)">
+	     	Activate Customer
+	      	</a>
+	      	</li>
+	      <li  data-ng-show =" row.entity.status == 'Active'">
+	      	<a href="" data-ng-click="grid.appScope.vm.openDeactivateCustomer(row)">
+	      		Deactivate Customer
+	      	</a>
+	      </li>
+	      
+	      <li data-ng-show ="row.entity.status == 'Invitation sent'"> 
+	      	<a href="" data-ng-click="grid.appScope.vm.openDeleteCustomer(row)">
+	      		Delete Customer
+	      	</a>
+	      	<a href="" data-ng-click="grid.appScope.vm.openResendInvitationCustomer(row)">
+	      		Resend Invitation
+	      	</a>
+	      	</li>
+	      	
+	      	<!-- <li data-ng-show ="row.entity.status == 'Resend invitation'"> 
+	      	<a href="" data-ng-click="grid.appScope.vm.openResendInvitationCustomer(row)">
+	      		Resend Invitation
+	      	</a> -->	     
+	   </ul>
+   </div>
+</div>

@@ -1,0 +1,131 @@
+<style>
+.inputStyle {
+	width: 124%;
+	height: 30px;
+	margin-left: -78px;
+	border-style: inset;
+	border-radius: 0 !important; 
+    border-color: #000000;
+}
+
+</style>
+<!-- Modal Header -->
+<div class="modal-header">
+  <h3 class="modal-title">Add New Customer</h3>
+</div>
+<!-- End of Modal Header  -->
+
+<form novalidate name="AddCustomerForm" 
+data-ng-submit="submitAddCustomer(AddCustomerForm.$valid)" method="POST">
+<!-- Modal Body -->
+<div class="modal-body">
+  <div class="container-fluid text-center">
+   	 <div class="row">
+		  <div class="col-xs-6">
+		  	<div style="margin-left:31px;">Account Name</div>
+		  </div>
+		  <div class="col-xs-6">
+		  	<input type="text" name="domainName"  data-ng-model="domainName" class="form-control inputStyle"
+		  	 data-ng-minlength="0" data-ng-maxlength="65" required/>		
+		  </div>
+ 	  </div>
+ 	  <span data-ng-show="AddCustomerForm.domainName.$dirty && AddCustomerForm.domainName.$invalid" 
+ 	  style="color:red;margin-left:35%;">
+ 	  <span data-ng-show="AddCustomerForm.domainName.$error.required" style="color:red;margin-left:29%;">Account name is required</span>
+ 	  </span>
+ 	  <br>
+	  <div class="row">
+		  <div class="col-xs-6">
+		  	Organization Name*
+		  </div>
+		  <div class="col-xs-6">
+		  	<input type="text" name="organizationName"  data-ng-model="organizationName" class="form-control inputStyle" data-ng-minlength="0" data-ng-maxlength="100" required/>		
+		  </div>
+ 	  </div>
+ 	  <span data-ng-show="AddCustomerForm.organizationName.$dirty && AddCustomerForm.organizationName.$invalid" 
+    		style="color:red;margin-left:58%;">
+	  		<span data-ng-show="AddCustomerForm.organizationName.$error.required">Organization name is required</span>
+      </span>
+ 	 <br>
+ 	  <div class="row">
+		  <div class="col-xs-6">
+		  	<div style="margin-left:74px;">Email*</div>
+		  </div>
+		  <div class="col-xs-6">
+		  	<input type="text" name="email"  data-ng-model="email" class="form-control inputStyle" data-ng-pattern='/^[_a-zA-Z0-9]+(\.[_a-zA-Z0-9]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,4})$/' data-ng-minlength="0" data-ng-maxlength="250" required/>			
+		  </div>
+ 	  </div>
+ 	  <span data-ng-show="AddCustomerForm.email.$dirty && AddCustomerForm.email.$invalid" 
+    		style="color:red;margin-left:56%;">
+	  		<span data-ng-show="AddCustomerForm.email.$error.required" style="color:red;margin-left:8%;">Email address is required</span>
+	  		<span data-ng-show="AddCustomerForm.email.$error.pattern" style="color:red;">Please enter valid email address</span>
+      </span> 
+ 	  <br>
+ 	  <div class="row">
+		  <div class="col-xs-6">
+		  	<div style="margin-right:15px;">Contact Person Name*</div>
+		  </div>
+		  <div class="col-xs-6">
+		  	<input type="text" name="contactpersonName"  data-ng-model="contactpersonName" class="form-control inputStyle" data-ng-minlength="0" data-ng-maxlength="250" required/>		
+		  </div>
+ 	  </div>
+ 	  <span data-ng-show="AddCustomerForm.contactpersonName.$dirty && AddCustomerForm.contactpersonName.$invalid" 
+    		style="color:red;margin-left:55%;">
+	  		<span data-ng-show="AddCustomerForm.contactpersonName.$error.required">Contact person name is required</span>
+      </span>
+ 	  <br>
+ 	  <div class="row">
+		  <div class="col-xs-6">
+		  	<div style="margin-left:33px;">Phone Number*</div>
+		  </div>
+		  <div class="col-xs-6">
+		  	<input type="text" name="phoneNumber" data-ng-model="phoneNumber"
+		  	class="form-control inputStyle" data-ng-minlength="10" data-ng-maxlength="18" data-ng-pattern="/^[0-9.()+- ]*$/" required/>		  			
+		  </div>
+ 	  </div>                                                                                                 
+ 	  <span data-ng-show="AddCustomerForm.phoneNumber.$dirty && AddCustomerForm.phoneNumber.$invalid" 
+	  style="color:red;margin-left:35%;">  	    
+  	    <span data-ng-show="AddCustomerForm.phoneNumber.$error.required" style="color:red;margin-left:28%;">Phone number is required</span>
+	  	<!-- <span data-ng-show="AddCustomerForm.phoneNumber.$error.pattern" style="color:red;margin-left:35%;">Not a valid number!</span> -->
+	  	<span data-ng-show="AddCustomerForm.phoneNumber.$error.minlength" style="color:red;margin-left:4%;">Phone number should be between 10-18 digits</span>
+	   </span>
+ 	  <br>
+ 	  <div class="row">
+		  <div class="col-xs-6">
+		  	<div style="margin-left:74px;">Address*</div>
+		  </div>
+		  <div class="col-xs-6">
+		  	<input type="text" name="location"  data-ng-model="location" class="form-control inputStyle" data-ng-minlength="0" data-ng-maxlength="256" required/>		
+		  </div>
+ 	  </div>
+ 	  <span data-ng-show="AddCustomerForm.location.$dirty && AddCustomerForm.location.$invalid" 
+    		style="color:red;margin-left:70%;">
+	  		<span data-ng-show="AddCustomerForm.location.$error.required">Address is required</span>
+      </span>
+ 	    <br>
+ 	  <div class="row">
+		  <div class="col-xs-6">
+		  	<div style="margin-left:89px;">Tax ID</div>
+		  </div>
+		  <div class="col-xs-6">
+		  	<input type="text" name="tax"  data-ng-model="tax" class="form-control inputStyle" data-ng-minlength="0" data-ng-invalid-maxlength="250"/>		
+		  </div>
+ 	  </div>
+ 	 <!--  <span data-ng-show="AddCustomerForm.tax.$dirty && AddCustomerForm.tax.$invalid" 
+    		style="color:red;margin-left:72%;">
+	  		<span data-ng-show="AddCustomerForm.tax.$error.required">Tax ID is required</span>	  		
+      </span> -->
+ 	  <br>
+  </div>  
+</div>
+<!-- End of Modal Body  -->
+<!-- Modal Footer -->
+<div class="modal-footer">  
+  <div class="text-center">
+    <button class="btn btn-default" type="button" data-ng-click="cancel()">Cancel</button>
+    <button class="btn btn-primary" data-ng-disabled="AddCustomerForm.$invalid"
+    type="submit">Add Customer</button>
+  </div>
+</div>
+<!-- End of Modal Footer -->
+</form>

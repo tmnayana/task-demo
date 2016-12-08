@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html data-ng-app="loginApp">
+	
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Fluke-Customer Account Management</title>
+	<link rel="icon" href="public/assets/images/fluke_logo.png" type="image/gif" sizes="16x16">
+	<script src="public/js/lib/jquery-3.0.0.js"></script>		
+	<script src="public/js/lib/angular.js"></script>	
+    <script src="public/js/lib/angular-animate.js"></script>       
+    <script src="public/js/lib/ui-bootstrap-tpls-0.14.2.js"></script>    
+	<script type="text/javascript" src="public/js/controllers/loginCtrl.js"></script>
+	<script type="text/javascript" src="public/js/controllers/forgotPasswordCtrl.js"></script>
+	<!-- <script type="text/javascript" src="bower_components/js/angular-local-storage.min.js"></script> -->
+	<link rel="stylesheet" href="public/css/lib/bootstrap.min.css"/>
+	<script src="public/js/lib/sweetalert.min.js"></script>
+	<link rel="stylesheet" href="public/css/lib/sweetalert.css"/>
+	<link rel="stylesheet" href="public/css/stylesheets/login.css"/>	
+  </head>
+    
+  <body data-ng-controller="loginCtrl">  
+  <section style="margin-top:5%;">
+    <div data-ng-include="'public/templates/loginLogoSection.html'"></div>	
+  </section>
+  
+  <section class="container-fluid" style="margin-left:36%;margin-right:34%;">	
+    <hr
+		style="border-color: lightgray; margin-left: -14%; margin-right: -20%; margin-top: 7%">
+	<h1 class="text-center"
+		style="font-color: lightgray; font-weight: bold; font-size: 1.2em;">Customer
+		Management portal</h1>
+	<br>
+	<form name="loginForm" novalidate
+	data-ng-submit="submitLoginForm(loginForm.$valid)" method="POST">
+	<!-- <div class="form-group">
+		<select name="region" required="required" class="form-control"
+			style="border-radius: 0px !important" data-ng-model="region">
+			<option value="">--Please Select region--</option>
+			<option value="US West(oregon)">US West(oregon)</option>
+			<option value="EU (Frankfurt)">EU (Frankfurt)</option>
+			<option value="Asia Paciflc (Sydney)">Asia Paciflc (Sydney)</option>
+		</select>
+		<div
+			data-ng-show="loginForm.region.$dirty && loginForm.region.$invalid"
+			style="color: red; margin-left:0%">
+			<div data-ng-show="loginForm.region.$error.required">Region
+				is required</div>
+		</div>
+	</div>
+	<br> -->
+	<div class="form-group">
+		<input type="text" name="username" class="form-control"
+			data-ng-maxlength="40" style="border-radius: 0px !important"
+			data-ng-model="username" placeholder="Username" required />
+		<div
+			data-ng-show="loginForm.username.$dirty && loginForm.username.$invalid"
+			style="color: red; margin-left:61%">
+			<div data-ng-show="loginForm.username.$error.required">Username
+				is required</div>
+		</div>
+	</div>
+	<br>
+	<div class="form-group">
+		<input type="password" name="password" placeholder="Password"
+			class="form-control" data-ng-model="password"
+			style="border-radius: 0px !important" required="required"/>
+		<div
+			data-ng-show="loginForm.password.$dirty && loginForm.password.$invalid"
+			style="color: red; margin-left:62%">
+			<div data-ng-show="loginForm.password.$error.required">Password
+				is required</div>
+		</div>
+	</div>
+	<br>
+	<div class="form-group">
+		<input type="checkbox"
+			data-ng-model="rememberMe"
+			style="border-radius: 0px !important"/> Remember Me
+	</div>
+	<br>
+	<div class="form-group text-center">
+		<button type="submit" class="btn btn-primary"
+			style="font-weight: bold; font-size: 1.1em; width: 60%"
+			data-ng-disabled="loginForm.$invalid">Login</button>
+	</div>
+	</form>
+  </section>
+	<!-- 
+  <section style="margin-left:56%">
+    <a href="" data-ng-click="openForgotPassword('md')">Forgot password?</a>
+  </section>      
+ -->
+ </body>
+</html>

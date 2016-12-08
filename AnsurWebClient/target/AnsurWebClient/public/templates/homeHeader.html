@@ -1,0 +1,45 @@
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid" style="background-color: black">
+		<div class="navbar-header"
+			style="margin-bottom: 0%; border-radius: 0px">
+			<div class="nav navbar navbar-left">
+				<img src="../public/assets/images/fluke_logo.png"
+					style="margin-top: 1%" alt="Fluke_Logo" width="17%" height="40px">
+				<img src="../public/assets/images/seperator.png" alt="separator"
+					width="1%" height="40px"> <span
+					style="color: white; font-size: 1em; font-weight: bold;">ANG</span>
+			</div>
+		</div>
+
+		<ul class="nav navbar-nav navbar-right" style="margin-right: 0%">
+			<li
+				style="color: white; font-size: 1em; font-weight: bold; margin-top: 5%;">
+				{{username}} <img src="../public/assets/images/seperator.png"
+				style="margin-left: 7%" width="2%" height="40px" alt="separator">
+			</li>
+
+			<li>
+				<div uib-dropdown dropdown-append-to-body>
+					<button
+						style="margin-top: 4%; background-color: black; border-color: black"
+						id="btn-append-to-body" type="button" class="btn btn-primary"
+						uib-dropdown-toggle>
+						<img src="../public/assets/images/user-login-man-person.jpg"
+							class="img-circle" alt="Cinque Terre" width="30" height="30">
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" uib-dropdown-menu
+						style="margin-left: -8%" role="menu"
+						aria-labelledby="btn-append-to-body">
+						<!-- <li><a href="" data-ng-click="openUserProfile()">My
+								Profile</a></li> -->
+						<li><a href="" data-ng-click="openChangePassword()">Change
+								Password</a></li>
+						<li class="divider"></li>
+						<li><a href="" data-ng-click="logout()">Logout</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+</nav>

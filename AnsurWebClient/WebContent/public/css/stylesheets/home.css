@@ -1,0 +1,25 @@
+.modal-body {
+	border-top: 1px solid lightgray;
+	border-bottom: 1px solid lightgray;
+}
+.droplist {
+	margin-left: -133px !important;
+	margin-top: 10px !important;
+}
+.navbar {
+    border-radius: 0px !important;
+    margin-bottom: 0px !important;
+}
+.dropdown-menu .divider {
+	background-color: lightgray !important;
+}
+.sweet-alert p {
+	color: #337ab7;
+}
+.sweet-alert button {
+	border-radius: 26px !important;	
+	background-color: #337ab7 !important;
+}
+.sweet-alert button.cancel {
+    background-color: #b9b9b9 !important;
+}

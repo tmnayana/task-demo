@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html data-ng-app="homeApp">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Fluke-Customer Account Management</title>
+		<link rel="icon" href="../public/assets/images/fluke_logo.png"
+			type="image/gif" sizes="16x16">
+			<script src="../public/js/lib/jquery-3.0.0.js"></script>
+		<script src="../public/js/lib/angular.js"></script>
+		<script src="../public/js/lib/angular-route.js"></script>
+		<script src="../public/js/lib/ui-bootstrap-tpls-0.14.2.js"></script>
+		<script type="text/javascript" src="../public/js/lib/ui-grid/ui-grid.js"></script>
+		
+		<!-- <script src="http://ui-grid.info/release/ui-grid-unstable.js"></script> -->
+		<script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
+		<script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
+		<script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>
+		
+		<script src="../public/js/lib/ui-grid/ui-grid-unstable.js"></script>
+		<script type="text/javascript" src="../public/js/controllers/homeCtrl.js"></script>
+		<script src="../public/js/lib/sweetalert.min.js"></script>
+		<link rel="stylesheet" href="../public/css/lib/sweetalert.css"/>
+		<link rel="stylesheet" href="../public/css/lib/bootstrap.min.css" />
+		<link href="../public/css/fonts/glyphicons-halflings-regular.eot">
+		<link href="../public/css/fonts/glyphicons-halflings-regular.svg">
+		<link href="../public/css/fonts/glyphicons-halflings-regular.ttf">
+		<link href="../public/css/fonts/glyphicons-halflings-regular.woff">
+		<link href="../public/css/fonts/glyphicons-halflings-regular.woff2">
+		<link rel="stylesheet" href="../public/css/lib/ui-grid/ui-grid.css">
+		<link rel="stylesheet" href="../public/css/lib/ui-grid/ui-grid-unstable.css">
+		<link rel="stylesheet" href="../public/css/lib/ui-grid/ui-grid.eot">
+		<link rel="stylesheet" href="../public/css/lib/ui-grid/ui-grid.ttf">
+		<link rel="stylesheet" href="../public/css/lib/ui-grid/ui-grid.woff">
+		<link rel="stylesheet" type="image/svg+xml" href="../public/css/lib/ui-grid/ui-grid.svg">
+		<link rel="stylesheet" href="../public/css/stylesheets/home.css" />
+		<script src="../public/js/controllers/addCustomerCtrl.js"></script>
+		<script src="../public/js/controllers/customerInfoCtrl.js"></script>
+		<script src="../public/js/controllers/changePasswordCtrl.js"></script>
+		<script src="../public/js/controllers/userProfileCtrl.js"></script>
+		<script src="../public/js/controllers/addSubscriptionCtrl.js"></script>
+		<script src="../public/js/directives/compareTo.js"></script>
+	</head>
+
+	<body data-ng-controller="homeCtrl">
+		<header>
+			<div data-ng-include="'../public/templates/homeHeader.html'"></div>		
+		</header>
+		
+		<section>
+			<div data-ng-view></div>
+		</section>
+	
+		<footer class="navbar-fixed-bottom" style="background-color: black;">
+		  	<div data-ng-include="'../public/templates/homeFooter.html'"></div>		
+		</footer>
+	</body>
+</html>
+
+

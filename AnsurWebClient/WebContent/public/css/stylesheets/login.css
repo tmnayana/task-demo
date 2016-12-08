@@ -1,0 +1,14 @@
+.modal.fade .modal-dialog {
+	margin-top: 14%;
+}
+.modal-body {
+	border-top: 1px solid lightgray;
+	border-bottom: 1px solid lightgray;
+}
+.sweet-alert button {
+	border-radius: 26px !important;
+	background-color: #337ab7 !important;
+}
+.sweet-alert p {
+	/* color: red; */
+}
